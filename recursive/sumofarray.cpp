@@ -7,7 +7,7 @@ int sumOfArray(int arr[],int size){
         return 0;
     }
     if(size==1){
-        return arr[0];
+        return sum+arr[0];
     }
     else{
         sum+=arr[0];
