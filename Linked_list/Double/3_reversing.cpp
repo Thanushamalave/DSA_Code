@@ -36,25 +36,18 @@ void insertionAtTail(Node* &head,int val){
     n->prev=temp;
 
 }
-void deletion(Node* &head,int target){
-    if(head==NULL){
-        return;
+void reversing(Node* &head){
+    Node* temp=NULL;
+    Node* curr=head;
+    while(curr!=NULL){
+        temp=curr->prev;
+        curr->prev=curr->next;
+        curr->next=temp;
+        curr=curr->prev;
     }
-    Node* temp=head;
-    if(temp->data==target){
-        head=head->next;
-        delete temp;
-        return;
+    if(curr!=NULL){
+        head=curr->prev;
     }
-    while(temp->data!=target){
-        temp=temp->next;
-    }
-    Node* toDelete=temp;
-    if(temp->next!=NULL)
-        temp->next->prev=temp->prev;
-
-    temp->prev->next=temp->next;
-    delete toDelete;
 }
 void display(Node* head){
     Node* temp=head;
@@ -71,6 +64,6 @@ int main(){
     insertionAtTail(head,3);
     insertAtHead(head,0);
     display(head);
-    deletion(head,0);
+    reversing(head);
     display(head);
 }
