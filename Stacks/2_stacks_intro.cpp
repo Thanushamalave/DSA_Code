@@ -44,13 +44,12 @@ class Stack{
 int main(){
     Stack s;
     string s1="Thanusha is good girl.";
-    string s2=s1.split(" ");
-    // for(int i=0;i<s1.length();i++){
-    //     s.push(s1[i]);
-    // }
-    // for(int i=0;i<s1.length();i++){
-    //     s.pop();
-    // }
-    cout<<s2[0];
+
+    for(int i=0;i<s1.length();i++){
+        s.push(s1[i]);
+    }
+    for(int i=0;i<s1.length();i++){
+        s.pop();
+    }
     
 }

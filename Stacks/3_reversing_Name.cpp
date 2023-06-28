@@ -3,7 +3,8 @@
 using namespace std;
 int main(){
     stack<char> s;
-    string s1="Thanusha";
+    string s1="Thanusha is a good girl.";
+    string s2=s1.s
     for(int i=0;i<s1.length();i++){
         char ch=s1[i];
         s.push(ch);

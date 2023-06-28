@@ -8,13 +8,13 @@ bool matching(string s){
         char ch=s[i];
         if(s[i]=='['||s[i]=='('||s[i]=='{'){
             st.push(ch);
-        }else if(!st.empty() && ((ch==']' && st.top()=='[')||(ch==')' && st.top()=='(')||(ch=='}' && st.top()=='{'))){
-                        st.pop();
-            }
-            else{
-                return false;
-            }
-        
+        }
+        else if(!st.empty() && ((ch==']' && st.top()=='[')||(ch==')' && st.top()=='(')||(ch=='}' && st.top()=='{'))){
+            st.pop();
+        }
+        else{
+            return false;
+        }
     }
     if(st.empty()){
         return true;
