@@ -53,7 +53,7 @@ Node* reversing(Node* &head,int k){
         count++;
     }
     if(next!=NULL){
-        prev->next= reversing(next,k);
+        head->next= reversing(next,k);
     }
     return prev;
 }

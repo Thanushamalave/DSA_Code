@@ -45,8 +45,8 @@ void reversing(Node* &head){
         curr->next=temp;
         curr=curr->prev;
     }
-    if(curr!=NULL){
-        head=curr->prev;
+    if(temp!=NULL){
+        head=temp->prev;
     }
 }
 void display(Node* head){

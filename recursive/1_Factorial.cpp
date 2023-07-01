@@ -6,6 +6,7 @@ int factorial(int c){
     }
     int res=c*factorial(c-1);
     return res;
+
 }
 int main(){
     int c;

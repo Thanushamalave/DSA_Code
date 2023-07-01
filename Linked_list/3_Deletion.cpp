@@ -52,8 +52,7 @@ void deletion(Node* &head,int target){
    head= head->next;
    delete temp;
    return;
-        // head=head->next;
-        // return;
+    
     }
 
     while(temp->next->data!=target){

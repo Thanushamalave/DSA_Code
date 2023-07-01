@@ -2,17 +2,17 @@
 using namespace std;
 bool happyNumber(int num){
     int sum=0;
-    while(num!=0){
+    do{
         int rem=num%10;
         num=num/10;
         sum+=rem*rem;
-    }
+    }while(num!=0);
     if(sum==1){
         return true;
     }
     happyNumber(sum);
-    return false;
-// return sum;
+    // return false;
+
 }
 int main(){
     int num;
